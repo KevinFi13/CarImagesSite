@@ -7,11 +7,13 @@ $(function () {
 
 	var rootRef = firebase.database().ref().child("Posts");
 
+	//populate timeline with posts
 	rootRef.on("child_added", snap => {
 		var caption = snap.child("caption").val();
 		var email = snap.child("userEmail").val();
 		var myUrl = snap.child("url").val();
 
+		//preprend post
 		$(".timeline").prepend(`<div class="post"> <a target="_blank" href="${myUrl}"> <img src="${myUrl}" width="600"> </a> <h1>${caption}</h1></div>`);
 	});
 });
@@ -20,16 +22,6 @@ $(function () {
 function topFunction() {
 	document.body.scrollTop = 0; // For Safari
 	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-};
-
-
-//Create new Post
-function addPost(filename) {
-	//get timeline
-	var timeline = document.getElementById("timeline");
-
-	$(".timeline").prepend('<div class="post"> <a target="_blank" href="images/ferrari.jpeg"> <img src="images/ferrari.jpeg" width="600"> </a> </div>');
-	topFunction(); //scroll to top after posting new image
 };
 
 
