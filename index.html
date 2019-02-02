@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Head includes things like link to css file, page name, etc.-->
+	<title>Kevin's Website</title>
+	<!--link to css file-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+	<!-- FIREBASE-->
+	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyAFqMN4hPiMs5dBJZdwMucioDVAsBjyQ8c",
+			authDomain: "car-image-sharing.firebaseapp.com",
+			databaseURL: "https://car-image-sharing.firebaseio.com",
+			projectId: "car-image-sharing",
+			storageBucket: "car-image-sharing.appspot.com",
+			messagingSenderId: "889223072869"
+		};
+		firebase.initializeApp(config);
+	</script>
+
+
+
+	<!--Import Jquery-->
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<!--link to JS file-->
+	<script src="main.js"></script>
+</head>
+
+
+<body>
+	<div class="bigdiv">
+		<!--HEADER-->
+		<div class="header" id="topHeader">
+			<!--TOP BUTTON-->
+			<div id="topButton">
+				<button onclick="topFunction()" id="logoButton" title="Go to top">Kevin's Website</button>
+			</div>
+
+			<!--Add Image Button-->
+			<div id="addImage">
+				<button onclick="addPost()" id="addPost" title="Add Image">Add Image</button>
+			</div>
+
+			<!--Search Box-->
+			<div class="searchBox" id="searchBox">
+				<input type="text" name="search" id="searchbar" placeholder="Search">
+			</div>
+		</div>
+
+
+
+		<!--TIMELINE-->
+		<div class="timeline" id="timeline">
+
+			
+		</div>
+	</div>
+
+
+
+
+
+	<!--UPLOAD IMAGE TEST-->
+	<div class="upload">
+		<h2>Upload</h2>
+		<input type="text" id="imageCaption" placeholder="Write a Caption">
+		<label class="upload-group"> Upload File <input type="file" class="upload-group" id="file"> </label>
+		<button type="button" class="btn btn-primary" id="uploadButton" onclick="uploadFile()">SUBMIT</button>
+	</div>
+
+
+	<button type="button" class="myBTN" id="signMeOut" onclick="signOut()">SIGN OUT</button>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
