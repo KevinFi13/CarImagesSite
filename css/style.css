@@ -73,22 +73,6 @@ input#file{
 	color: #A9A9A9;
 }
 
-/*Align image button*/
-#addImage{
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 35px;
-}
-
-#addPost{
-	width: 100px;
-	height: 20px;
-	font-size: 14px;
-	text-align: center;
-	vertical-align: middle;
-}
-
 /*Vertically center the button*/
 #topButton{
 	position: absolute;
